@@ -1,4 +1,4 @@
-package br.com.fiap.calculadoraimc
+package br.com.fiap.calculadoraimc.calculos
 
 import androidx.compose.ui.graphics.Color
 import kotlin.math.pow
@@ -24,7 +24,7 @@ fun obterStatusImc(imcUsuario: Double) : String {
     }
 }
 
-fun corDoResultado(imc: Double): Color {
+fun corDoCardResultado(imc: Double): Color {
     return when {
         imc == 0.0 -> Color(0xFF329F6B)
         imc < 18.5 -> Color(0xFFB71C1C) // Abaixo do peso
