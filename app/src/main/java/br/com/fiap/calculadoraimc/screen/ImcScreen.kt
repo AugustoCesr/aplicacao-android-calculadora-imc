@@ -33,6 +33,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.text.style.TextAlign
@@ -48,7 +49,9 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
     val peso by imcScreenViewModel.peso.observeAsState("")
     val altura by imcScreenViewModel.altura.observeAsState("")
     val imc by imcScreenViewModel.imc.observeAsState(0.0)
-    val statusImc by imcScreenViewModel.statusImc.observeAsState("")
+    val statusImc by imcScreenViewModel.statusImc.observeAsState(initial = R.string.empty_string)
+
+
 
     Box(
         modifier = Modifier.fillMaxSize().padding(top = 22.dp)
@@ -70,7 +73,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                 Spacer(modifier = Modifier.height(34.dp))
                 Image(
                     painter = painterResource(id = R.drawable.imc),
-                    contentDescription = "Imagem escrito I M C",
+                    contentDescription = stringResource(id = R.string.image_content_description),
                     modifier =
                         Modifier
                             .size(60.dp)
@@ -79,7 +82,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                 )
                 Spacer(modifier = Modifier.height(25.dp))
                 Text(
-                    text = "CALCULADORA IMC",
+                    text = stringResource(id = R.string.main_title),
                     fontSize = 20.sp,
                     color = colorResource(id = R.color.white)
                 )
@@ -104,7 +107,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                             .padding(vertical = 16.dp, horizontal = 32.dp)
                     ) {
                         Text(
-                            text = "Seus dados",
+                            text = stringResource(id = R.string.card_title),
                             modifier = Modifier.fillMaxWidth(),
                             fontSize = 24.sp,
                             fontWeight = FontWeight.Bold,
@@ -113,7 +116,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                         )
                         Spacer(modifier = Modifier.height(32.dp))
                         Text(
-                            text = "Seu peso",
+                            text = stringResource(id = R.string.input_box_text_one),
                             modifier = Modifier.padding(bottom = 8.dp),
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Normal,
@@ -121,7 +124,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                         )
                         CaixaDeEntrada(
                             value = peso,
-                            placeHolder = "Seu peso em Kg",
+                            placeHolder = stringResource(id = R.string.inbox_placeholder_one),
                             keyboardType = KeyboardType.Number,
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(16.dp),
@@ -131,7 +134,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                         )
                         Spacer(modifier = Modifier.height(16.dp))
                         Text(
-                            text = "Sua altura",
+                            text = stringResource(id = R.string.input_box_text_two),
                             modifier = Modifier.padding(bottom = 8.dp),
                             fontSize = 16.sp,
                             fontWeight = FontWeight.Normal,
@@ -139,7 +142,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                         )
                         CaixaDeEntrada(
                             value = altura,
-                            placeHolder = "Sua altura em cm.",
+                            placeHolder = stringResource(id = R.string.inbox_placeholder_two),
                             keyboardType = KeyboardType.Number,
                             modifier = Modifier.fillMaxWidth(),
                             shape = RoundedCornerShape(16.dp),
@@ -160,7 +163,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                             colors = ButtonDefaults.buttonColors(containerColor = colorResource(id = R.color.azul_padrao))
                         ) {
                             Text(
-                                text = "CALCULAR",
+                                text = stringResource(id = R.string.calculate_button),
                                 fontWeight = FontWeight.Bold,
                                 color = Color.White,
                                 fontSize = 15.sp
@@ -180,7 +183,7 @@ fun IMCScreen(imcScreenViewModel: ImcScreenViewModel) {
                         border = BorderStroke(1.dp, Color(0xFF14769F))
                     ) {
                         Text(
-                            text = "Limpar resultado",
+                            text = stringResource(id = R.string.clear_result_button),
                             fontWeight = FontWeight.Bold,
                             fontSize = 16.sp,
                             color = Color(0xFF14769F)

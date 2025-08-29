@@ -1,6 +1,7 @@
 package br.com.fiap.calculadoraimc.calculos
 
 import androidx.compose.ui.graphics.Color
+import br.com.fiap.calculadoraimc.R
 import kotlin.math.pow
 
 fun calcularImc(pesoUsuario: Double, alturaUsuario: Double) : Double {
@@ -8,19 +9,14 @@ fun calcularImc(pesoUsuario: Double, alturaUsuario: Double) : Double {
     return imc
 }
 
-fun obterStatusImc(imcUsuario: Double) : String {
-    return if (imcUsuario < 18.5) {
-        "Abaixo do peso"
-    } else if (imcUsuario >= 18.5 && imcUsuario < 25.0) {
-        "Peso Ideal"
-    } else if (imcUsuario >= 25.0 && imcUsuario < 30.0) {
-        "Levemente\nacima do peso"
-    } else if (imcUsuario >= 30.0 && imcUsuario < 35.0) {
-        "Obesidade Grau I"
-    } else if (imcUsuario >= 35.0 && imcUsuario < 40.0) {
-        "Obesidade Grau II"
-    } else {
-        "Obesidade Grau III"
+fun obterStatusImc(imcUsuario: Double): Int {
+    return when {
+        imcUsuario < 18.5 -> R.string.underweight_bmi
+        imcUsuario < 25.0 -> R.string.bmi_ideal_weight
+        imcUsuario < 30.0 -> R.string.slightly_overweight_bmi
+        imcUsuario < 35.0 -> R.string.bmi_grade_I_obesity
+        imcUsuario < 40.0 -> R.string.bmi_grade_II_obesity
+        else -> R.string.bmi_grade_III_obesity
     }
 }
 

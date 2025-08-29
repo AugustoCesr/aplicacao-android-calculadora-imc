@@ -1,3 +1,20 @@
 <resources>
-    <string name="app_name">Calculadora IMC</string>
+    <string name="app_name">BMI Calculator</string>
+    <string name="main_title">BMI CALCULATOR</string>
+    <string name="card_title">Your data</string>
+    <string name="input_box_text_one">Your weight</string>
+    <string name="input_box_text_two">Your height</string>
+    <string name="inbox_placeholder_one">Your weight in Kg.</string>
+    <string name="inbox_placeholder_two">Your height in cm.</string>
+    <string name="calculate_button">CALCULATE</string>
+    <string name="clear_result_button">Clear result</string>
+    <string name="result_card_text">Result</string>
+    <string name="image_content_description">Image written I M C</string>
+    <string name="underweight_bmi">Underweight</string>
+    <string name="bmi_ideal_weight">Ideal weight</string>
+    <string name="slightly_overweight_bmi">Slightly\noverweight</string>
+    <string name="bmi_grade_I_obesity">Grade I obesity</string>
+    <string name="bmi_grade_II_obesity">Grade II obesity</string>
+    <string name="bmi_grade_III_obesity">Grade III obesity</string>
+    <string name="empty_string"></string>
 </resources>

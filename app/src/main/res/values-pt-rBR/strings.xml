@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Calculadora IMC</string>
+    <string name="main_title">CALCULADORA IMC</string>
+    <string name="card_title">Seus dados</string>
+    <string name="input_box_text_one">Seu peso</string>
+    <string name="input_box_text_two">Sua altura</string>
+    <string name="inbox_placeholder_one">Seu peso em Kg.</string>
+    <string name="inbox_placeholder_two">Sua altura em cm.</string>
+    <string name="calculate_button">CALCULAR</string>
+    <string name="clear_result_button">Limpar resultado</string>
+    <string name="result_card_text">Resultado</string>
+    <string name="image_content_description">Imagem escrito I M C</string>
+    <string name="underweight_bmi">Abaixo do peso</string>
+    <string name="bmi_ideal_weight">Peso ideal</string>
+    <string name="slightly_overweight_bmi">Levemente\nacima do peso</string>
+    <string name="bmi_grade_I_obesity">Obesidade grau I</string>
+    <string name="bmi_grade_II_obesity">Obesidade grau II</string>
+    <string name="bmi_grade_III_obesity">Obesidade grau III</string>
+    <string name="empty_string"></string>
+</resources>

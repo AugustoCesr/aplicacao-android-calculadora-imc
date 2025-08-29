@@ -14,14 +14,16 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import br.com.fiap.calculadoraimc.R
 import br.com.fiap.calculadoraimc.calculos.corDoCardResultado
 
 @Composable
-fun BoxScope.CardResultado(statusImc: String, imc: Double) {
+fun BoxScope.CardResultado(statusImc: Int, imc: Double) {
     Card(modifier =
         Modifier
             .fillMaxWidth()
@@ -39,12 +41,12 @@ fun BoxScope.CardResultado(statusImc: String, imc: Double) {
         ) {
             Column() {
                 Text(
-                    text = "Resultado",
+                    text = stringResource(id = R.string.result_card_text),
                     color = Color.White,
                     fontSize = 16.sp
                 )
                 Text(
-                    text = statusImc,
+                    text = stringResource(id = statusImc!!),
                     fontWeight = FontWeight.Bold,
                     color = Color.White,
                     fontSize = 22.sp
