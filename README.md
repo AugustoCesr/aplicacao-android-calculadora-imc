@@ -2,7 +2,7 @@
 
 ![banner_imc_android](https://github.com/user-attachments/assets/c0699299-cc68-422e-8a7a-6a11651710c6)<br><br>
 
-Este é um aplicativo Android simples desenvolvido para calcular o Índice de Massa Corporal (IMC). Atividade de aula da FIAP.<br><br>
+Este é um aplicativo Android simples desenvolvido para calcular o Índice de Massa Corporal (IMC). Atividade de aula da FIAP. Depois melhorei a aplicação adicionando arquitetura MVVM, e os textos no strings.xml.<br><br>
 
 ## :gear: Funcionalidades
 - `O usuário informa peso (Kg) e altura (cm).`
